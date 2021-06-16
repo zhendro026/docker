@@ -1,0 +1,17 @@
+#installing docker on Centos 7
+
+#check update
+yum check-update
+
+#installation from package
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+#add docker repo to repo local
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+#installa docker
+yum install docker -y
+
+#start and enable docker
+systemctl start docker
+systemctl enable docker
